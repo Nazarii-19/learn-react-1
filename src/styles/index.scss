@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+@import "_nullstyles";
+@import "_mixins";
+@import "_fonts";
+@import "_colors";
+
+// ====================================================================================
+:root {
+  --transition-default: 0.3s;
+  --border-radius-low: 6px;
+  --border-radius-default: 12px;
+  --border-radius-medium: 16px;
+  --border-radius-big: 20px;
+  --border-radius-infynity: 999px;
+
+  --z-index-low: 1;
+  --z-index-medium: 5;
+  --z-index-header: 100;
+  --z-index-modal: 150;
+
+  --filter: blur(20px) saturate(180%);
+}
+
+// ====================================================================================
+._container {
+  margin: 0 auto;
+  max-width: rem(1100);
+  padding: 0 rem(15);
+  width: 100%;
+  height: 100%;
+}
+
+#root, #__next {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+  }
+}
+
+// ====================================================================================
+$widthScrollbar: 6px;
+body {
+  //transition: var(--transition-default);
+  background: var(--body-background);
+  color: var(--black);
+  height: 2000px;
+}
+
+.scroll-bar {
+  &::-webkit-scrollbar {
+    width: $widthScrollbar;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #656565;
+    border-radius: 20px;
+
+    &:hover {
+      background: #464646;
+    }
+  }
+}
+
+.lock {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+.content-padding-right {
+  padding-right: $widthScrollbar;
+}
+
+img, video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+// ====================================================================================
+@import "_ui";
+@import "_text";

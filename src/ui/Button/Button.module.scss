@@ -1,0 +1,39 @@
+@import "../../styles/_mixins";
+
+.button {
+  padding: rem(10) rem(30);
+  border-radius: var(--border-radius-low);
+  font-size: rem(16);
+  white-space: nowrap;
+  width: fit-content;
+  height: fit-content;
+
+  &__primary {
+    background: var(--primary);
+    color: var(--dark-green);
+    transition: var(--transition-default);
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  &__secondary {
+    background: var(--white);
+    border: 1px solid var(--black);
+    transition: var(--transition-default);
+
+    &:hover {
+      background: var(--primary);
+      color: var(--dark-green);
+      border: 1px solid transparent;
+    }
+  }
+
+  &__empty {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,60 @@
+@import "_mixins";
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.td-underline {
+  text-decoration: underline;
+}
+
+.td-underline-hover {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+.white-space-normal {
+  white-space: normal;
+}
+
+// ====================================================================================
+.color-black-and-white {
+  color: var(--black);
+}
+
+[data-theme="dark"] {
+  .color-black-and-white {
+    color: var(--white);
+  }
+}
+
+.color-black {
+  color: var(--black);
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.color-blue {
+  color: var(--blue);
+}
+
+// ====================================================================================
+.page-title {
+  font-size: rem(70);
+  line-height: 90px;
+}
+
+.section-title {
+  font-size: rem(40);
+}

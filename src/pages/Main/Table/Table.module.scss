@@ -1,0 +1,15 @@
+@import "../../../styles/_mixins";
+
+.table {
+  margin-top: rem(100);
+}
+
+.tabs {
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  color: var(--grey);
+
+  &__active {
+    color: var(--black);
+  }
+}
